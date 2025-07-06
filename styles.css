@@ -43,7 +43,7 @@ body::before {
 }
 
 .logo {
-    max-width: 150px;
+    max-width: 400px;
     height: auto;
 }
 
@@ -92,6 +92,23 @@ body::before {
     margin-bottom: 0;
 }
 
+/* Kanban section */
+.kanban-section {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.kanban-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.kanban-image {
+    max-width: 100%;
+    height: auto;
+}
+
 
 
 /* Footer */
@@ -107,9 +124,41 @@ body::before {
 }
 
 /* Responsive design */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 95%;
+    }
+    
+    .logo {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .opening-title {
+        font-size: 1.4rem;
+    }
+    
+    .logo {
+        max-width: 320px;
+    }
+}
+
 @media (max-width: 768px) {
-    .main-title {
-        font-size: 1.8rem;
+    .container {
+        padding: 0 20px;
+    }
+    
+    .header {
+        padding: 25px 0;
+    }
+    
+    .hero-section {
+        padding: 35px 15px;
     }
     
     .hero-title {
@@ -123,9 +172,17 @@ body::before {
     .opening-description {
         font-size: 1rem;
     }
+    
+    .kanban-section {
+        padding: 30px 15px;
+    }
+    
+    .logo {
+        max-width: 300px;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     .container {
         padding: 0 15px;
     }
@@ -135,15 +192,122 @@ body::before {
     }
     
     .hero-section {
-        padding: 30px 15px;
-    }
-    
-    .main-title {
-        font-size: 1.6rem;
+        padding: 30px 10px;
     }
     
     .hero-title {
         font-size: 1.8rem;
+    }
+    
+    .opening-title {
+        font-size: 1.2rem;
+    }
+    
+    .opening-description {
+        font-size: 0.95rem;
+    }
+    
+    .kanban-section {
+        padding: 25px 10px;
+    }
+    
+    .logo {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .header {
+        padding: 15px 0;
+    }
+    
+    .hero-section {
+        padding: 25px 8px;
+    }
+    
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .opening-title {
+        font-size: 1.1rem;
+    }
+    
+    .opening-description {
+        font-size: 0.9rem;
+    }
+    
+    .kanban-section {
+        padding: 20px 8px;
+    }
+    
+    .logo {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 0 8px;
+    }
+    
+    .header {
+        padding: 12px 0;
+    }
+    
+    .hero-section {
+        padding: 20px 5px;
+    }
+    
+    .hero-title {
+        font-size: 1.4rem;
+    }
+    
+    .opening-title {
+        font-size: 1rem;
+    }
+    
+    .opening-description {
+        font-size: 0.85rem;
+    }
+    
+    .kanban-section {
+        padding: 15px 5px;
+    }
+    
+    .logo {
+        max-width: 220px;
+    }
+}
+
+/* 横画面（ランドスケープ）対応 */
+@media (max-height: 500px) and (orientation: landscape) {
+    .header {
+        padding: 15px 0;
+    }
+    
+    .hero-section {
+        padding: 20px 15px;
+    }
+    
+    .kanban-section {
+        padding: 15px 15px;
+    }
+    
+    .logo {
+        max-width: 200px;
+    }
+}
+
+/* 高解像度ディスプレイ対応 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo, .kanban-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
     }
 }
 
